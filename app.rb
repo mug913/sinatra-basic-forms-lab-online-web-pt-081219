@@ -1,4 +1,5 @@
 require_relative 'config/environment'
+require_relative 'models/puppy.rb'
 
 class App < Sinatra::Base
 
@@ -11,7 +12,7 @@ class App < Sinatra::Base
   end
 
   post '/puppy' do
-    erb :display_puppy
+    pup = Puppy.new
   end
 
 end
